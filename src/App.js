@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "./components/Header";
 import Home from "./components/Home";
+import About from "./components/About";
 import Register from "./components/Register";
 import Footer from "./components/Footer";
 import "./styles/App.scss";
@@ -13,6 +14,7 @@ function App() {
       <Header />
       <Switch>
         <Route path="/" exact component={Home} />
+        <Route path="/about" component={About} />
         <Route path="/register" exact component={Register} />
       </Switch>
       <Footer />
