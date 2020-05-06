@@ -1,10 +1,10 @@
 import React from "react";
 import "../../styles/Header.scss";
 
-export default function Nav() {
+export default function Nav(props) {
   return (
     <nav>
-      <ul></ul>
+      <ul>{props.links}</ul>
     </nav>
   );
 }
