@@ -1,5 +1,14 @@
+@import "utilities/_variables.scss";
+
 footer {
   height: 10vh;
   display: flex;
   align-items: center;
+  .social {
+    display: flex;
+    margin-left: $margin-list;
+    li {
+      margin-right: $margin-list;
+    }
+  }
 }
