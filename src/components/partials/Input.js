@@ -3,7 +3,7 @@ import "../../styles/partials/Input.scss";
 const classNames = require("classnames");
 
 export default function Input(props) {
-  const inputClass = classNames();
+  const inputClass = classNames({});
   return (
     <input
       className={inputClass}

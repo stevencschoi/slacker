@@ -1,11 +1,11 @@
 import React from "react";
-import "../../styles/partials/Login.scss";
-import Input from "../partials/Input";
-import Button from "../partials/Button";
+import Input from "./partials/Input";
+import Button from "./partials/Button";
+import "../styles/Register.scss";
 
-import { useUserData } from "../../helpers/useUserData";
+import { useUserData } from "../helpers/useUserData";
 
-export default function Login() {
+export default function Register() {
   const { state, handleSubmit, handleInputChange } = useUserData();
 
   return (
@@ -24,9 +24,7 @@ export default function Login() {
         value={state.inputs.password}
         onChange={handleInputChange}
       />
-      <Button loginButton type="submit">
-        Login
-      </Button>
+      <Button>Register</Button>
     </form>
   );
 }

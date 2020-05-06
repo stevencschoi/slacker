@@ -12,10 +12,11 @@ export function useUserData() {
 
   const handleInputChange = (e) => {
     e.persist();
-    // console.log(e.target.value);
+    // update state with the inputs from the form
+    const inputValues = { ...state.inputs, [e.target.name]: e.target.value };
     setState((prev) => ({
       ...prev,
-      inputs: { username: e.target.value },
+      inputs: inputValues,
     }));
   };
 
