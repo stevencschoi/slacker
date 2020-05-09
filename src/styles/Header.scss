@@ -1,7 +1,7 @@
 @import "utilities/_variables.scss";
 
 header {
-  height: 10vh;
+  height: $fh-height;
   display: flex;
   align-items: center;
 }

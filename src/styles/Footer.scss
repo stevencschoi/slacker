@@ -1,11 +1,22 @@
 @import "utilities/_variables.scss";
 
 footer {
-  height: 10vh;
+  height: $fh-height;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  align-items: center;
+  p {
+    margin: 0;
+  }
   .social {
     display: flex;
+    margin-top: $margin-list;
     margin-left: $margin-list;
     li {
       margin-right: $margin-list;
