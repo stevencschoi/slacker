@@ -10,7 +10,7 @@ export default function Sidebar(props) {
     <div className="sidebar-container">
       <div className="workplaces">
         {/* map all workplaces user logs in to */}
-        wkpls
+        wrkpls
       </div>
       <div className="sidebar-head-body">
         <div className="sidebar-head">
@@ -24,9 +24,16 @@ export default function Sidebar(props) {
             <i className="far fa-edit"></i>
           </Button>
         </div>
+        <div className="default-links">stuff</div>
         <div className="channels">
+          <h3>Channels</h3>
           {/* map all channels*/}
           channels
+        </div>
+        <div className="dm">
+          <h3>Direct messages</h3>
+          {/* map recent IM conversations*/}
+          direct messages
         </div>
       </div>
       <Footer />

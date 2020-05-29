@@ -4,39 +4,71 @@
   display: flex;
   position: relative;
   background-color: $color-secondary;
+  color: $color-text-secondary;
   width: 25%;
   height: 100vh;
 }
 
 h3,
 h4 {
-  margin: 0;
+  margin: $margin-list 0;
 }
 
 .workplaces {
   width: $side-width;
   background-color: $color-secondary;
   border-right: $border;
+  padding: $margin-list 0;
 }
 
 .sidebar-head-body {
-}
-
-.sidebar-head {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: $header-component;
   padding-left: $margin-list;
-}
+  h3 {
+    color: $color-text;
+    margin-top: 1rem;
+    margin-bottom: 0;
+  }
 
-.button-message {
-  font-size: 2rem;
-  background-color: $color-secondary;
-  border-radius: 0.5rem;
-}
+  .sidebar-head {
+    padding: $margin-list 0;
+    h3 {
+      margin-right: $margin-list;
+    }
+    h4 {
+      color: $color-text-secondary;
+      margin-top: 0;
+      padding-bottom: $margin-list;
+    }
 
-.button-message:hover,
-.button-message:focus {
-  background-color: $color-third;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: $header-component;
+    border-bottom: $border;
+  }
+
+  .button-message {
+    font-size: 2rem;
+    background-color: $color-secondary;
+    border-radius: 0.5rem;
+  }
+
+  .button-message:hover,
+  .button-message:focus {
+    background-color: $color-third;
+  }
+
+  .default-links {
+    padding: $margin-list 0;
+  }
+
+  .channels {
+    padding: $margin-list 0;
+  }
+
+  .dm {
+    .default-links {
+      padding: $margin-list 0;
+    }
+  }
 }

@@ -39,5 +39,10 @@ nav {
     li {
       margin-right: $margin-head;
     }
+
+    li:hover,
+    li:focus {
+      color: $color-links-hover;
+    }
   }
 }

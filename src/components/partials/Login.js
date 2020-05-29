@@ -29,7 +29,7 @@ export default function Login() {
           Login
         </Button>
       </form>
-      <div>
+      <div className="register-words">
         Don't have an account? <a href="/register">Sign up</a> today!
       </div>
     </div>

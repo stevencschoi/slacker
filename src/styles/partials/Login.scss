@@ -20,6 +20,13 @@ button {
   padding: 0.5rem 1rem;
 }
 
-a {
-  color: $color-links;
+.register-words {
+  color: $color-text;
+  a {
+    color: $color-links;
+  }
+
+  a:hover {
+    color: $color-links-hover;
+  }
 }
