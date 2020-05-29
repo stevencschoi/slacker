@@ -17,10 +17,21 @@ const UserContextProvider = props => {
     instagram: `https://www.instagram.com/the_steve/`,
     twitter: `https://twitter.com/thestevechoi`,
     linkedin: `https://www.linkedin.com/in/choisteven/`,
+    // isLoggedIn: false,
+    // inputs: {
+    //   firstName: "",
+    //   lastName: "",
+    //   email: "",
+    //   username: "",
+    //   password: "",
+    //   passwordConfirmation: "",
+    // },
   });
 
   return (
-    <UserContext.Provider value={state}>{props.children}</UserContext.Provider>
+    <UserContext.Provider value={[state, setState]}>
+      {props.children}
+    </UserContext.Provider>
   );
 };
 

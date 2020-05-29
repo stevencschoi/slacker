@@ -1,10 +1,12 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { UserContext } from "../components/UserContext";
 
 export function useUserData() {
-  const [state, setState] = useState({
-    isLoggedIn: false,
-    inputs: { username: "", password: "" },
-  });
+  // const [state, setState] = useState({
+  //   isLoggedIn: false,
+  //   inputs: { username: "", password: "" },
+  // });
+  const [state, setState] = useContext(UserContext);
 
   const handleSubmit = e => {
     e.preventDefault();
