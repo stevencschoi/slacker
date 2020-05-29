@@ -6,11 +6,11 @@ import Button from "./Button";
 import { useUserData } from "../../helpers/useUserData";
 
 export default function Login() {
-  const { state, handleSubmit, handleInputChange } = useUserData();
+  const { state, handleSubmitLogin, handleInputChange } = useUserData();
 
   return (
     <div className="login-state">
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmitLogin}>
         <Input
           type="text"
           name="username"

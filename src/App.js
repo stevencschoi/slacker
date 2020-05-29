@@ -12,24 +12,29 @@ import { UserContextProvider } from "./components/UserContext";
 import "./styles/App.scss";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
+import { Provider } from 'react-redux'
+import store from './redux/store'
+
 function App() {
   return (
-    <Router>
-      <div className="App"></div>
-      <UserContextProvider>
-        <Header />
-        <div className="main-container">
-          <Sidebar />
-          <Switch>
-            <Route path="/" exact component={Home} />
-            <Route path="/about" exact component={About} />
-            <Route path="/blog" exact component={Blog} />
-            <Route path="/profile" exact component={Profile} />
-            <Route path="/register" exact component={Register} />
-          </Switch>
-        </div>
-      </UserContextProvider>
-    </Router>
+    <Provider store={store}>
+      <Router>
+        <div className="App"></div>
+        <UserContextProvider>
+          <Header />
+          <div className="main-container">
+            <Sidebar />
+            <Switch>
+              <Route path="/" exact component={Home} />
+              <Route path="/about" exact component={About} />
+              <Route path="/blog" exact component={Blog} />
+              <Route path="/profile" exact component={Profile} />
+              <Route path="/register" exact component={Register} />
+            </Switch>
+          </div>
+        </UserContextProvider>
+      </Router>
+    </Provider>
   );
 }
 
