@@ -4,11 +4,23 @@ import axios from "axios"
 import Cookies from "js-cookie"
 
 export function useUserData() {
+  const [state, setState] = useContext(UserContext);
   // const [state, setState] = useState({
   //   isLoggedIn: false,
   //   inputs: { username: "", password: "" },
   // });
-  const [state, setState] = useContext(UserContext);
+  const handleSubmitLogin = e => {
+    e.preventDefault();
+    // console.log(state.inputs);
+    axios.post("http://localhost:2468/login", {
+      username: state.inputs.username,
+      password: state.inputs.password
+    })
+      .then(res => {
+        Cookies.set('userId', res.data._id);
+        console.log("data", res)
+      })
+  };
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -19,10 +31,10 @@ export function useUserData() {
     axios.post("http://localhost:2468/register", {
       inputs: state.inputs
     })
-    .then(res => {
-      Cookies.set('userId', res.data._id);
-      console.log("data", res)
-    })
+      .then(res => {
+        Cookies.set('userId', res.data._id);
+        console.log("data", res)
+      })
   };
 
   const handleInputChange = e => {
@@ -35,5 +47,5 @@ export function useUserData() {
     }));
   };
 
-  return { state, handleSubmit, handleInputChange };
+  return { state, handleSubmit, handleInputChange, handleSubmitLogin };
 }
