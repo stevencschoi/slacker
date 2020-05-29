@@ -1,14 +1,23 @@
 @import "utilities/_variables.scss";
 
 header {
+  position: relative;
+  background-color: $color-header;
   height: $fh-height;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  border-bottom: $border;
 }
 
 .logo {
-  width: 5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: $side-width;
+  margin-left: 0;
+  margin-right: $margin-list;
   img {
     max-width: 100%;
   }
@@ -17,6 +26,7 @@ header {
 .left {
   display: flex;
   align-items: center;
+  margin-left: $side-width;
 }
 
 nav {

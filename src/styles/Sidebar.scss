@@ -1,0 +1,42 @@
+@import "./utilities/_variables.scss";
+
+.sidebar-container {
+  display: flex;
+  position: relative;
+  background-color: $color-secondary;
+  width: 25%;
+  height: 100vh;
+}
+
+h3,
+h4 {
+  margin: 0;
+}
+
+.workplaces {
+  width: $side-width;
+  background-color: $color-secondary;
+  border-right: $border;
+}
+
+.sidebar-head-body {
+}
+
+.sidebar-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: $header-component;
+  padding-left: $margin-list;
+}
+
+.button-message {
+  font-size: 2rem;
+  background-color: $color-secondary;
+  border-radius: 0.5rem;
+}
+
+.button-message:hover,
+.button-message:focus {
+  background-color: $color-third;
+}

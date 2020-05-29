@@ -8,10 +8,10 @@ export default function Header(props) {
   const info = useContext(UserContext);
   return (
     <header>
+      <div className="logo">
+        <img src={info.logo} alt="company logo"></img>
+      </div>
       <div className="left">
-        <div className="logo">
-          <img src={info.logo} alt="company logo"></img>
-        </div>
         <h2>{info.company}</h2>
       </div>
       <Nav />

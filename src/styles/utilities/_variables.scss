@@ -1,3 +1,16 @@
+// colours
+$color-header: #000000;
+$color-secondary: #181818;
+$color-third: #2f2f2f;
+$color-links: #facd3d;
+$color-text: #ffffff;
+
+// border
+$border: 0.05rem solid $color-third;
+
+// font-size
+$font-size-button: 1.3rem;
+
 // margins
 $margin-default: 0.5rem;
 $margin-list: 1rem;
@@ -10,5 +23,6 @@ $button-padding: 0.7rem 1.5rem;
 $fh-height: 10vh;
 $header-component: 7vh;
 
+$side-width: 8vh;
 $avatar-width: 6.5vh;
-$pic-width: 35vh;
+$pic-width: 40vh;

@@ -4,10 +4,20 @@
   width: $pic-width;
 
   header {
+    background-color: $color-third;
     height: $header-component;
     display: flex;
     justify-content: space-between;
   }
+}
+
+.button-collapse {
+  background-color: $color-third;
+}
+
+.button-collapse:hover,
+.button-collapse:focus {
+  background-color: $color-secondary;
 }
 
 .profile-pic {
@@ -23,6 +33,7 @@
   display: flex;
   justify-content: space-evenly;
   button {
+    font-size: $font-size-button;
     padding: $button-padding;
   }
 }

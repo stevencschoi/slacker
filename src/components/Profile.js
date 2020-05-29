@@ -1,7 +1,6 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useContext } from "react";
 import Button from "./partials/Button";
 import "../styles/Profile.scss";
-import moment from "moment";
 import { UserContext } from "./UserContext";
 
 export default function Profile() {
@@ -10,7 +9,7 @@ export default function Profile() {
     <div className="profile">
       <header>
         <h3>Profile</h3>
-        <Button>
+        <Button collapse>
           <i className="fas fa-times"></i>
         </Button>
       </header>

@@ -2,4 +2,17 @@
 
 body {
   font-size: 1.8rem;
+  color: #ffffff;
+}
+
+header,
+footer {
+  li {
+    color: $color-links;
+  }
+}
+
+.main-container {
+  display: flex;
+  // flex-direction: column;
 }

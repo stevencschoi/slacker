@@ -1,3 +1,5 @@
+@import "./utilities/_variables.scss";
+
 html {
   line-height: 1.15;
   font-size: 62.5%;
@@ -192,6 +194,7 @@ template {
 // ******************** NORMALIZE ENDS ********************
 
 body {
+  background-color: $color-third;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -210,9 +213,11 @@ ul {
 
 button {
   border: none;
-  background-color: #0069ed;
-  color: #ffffff;
+  background-color: #1894a0;
+  color: $color-text;
   text-align: center;
+  font-weight: 700;
+  padding: $button-padding;
   transition: background 250ms ease-in-out, transform 150ms ease;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -220,7 +225,7 @@ button {
 
 button:hover,
 button:focus {
-  background: #0053ba;
+  background: #1eb9c9;
 }
 
 a {

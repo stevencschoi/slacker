@@ -6,7 +6,7 @@ const UserContext = React.createContext();
 
 const UserContextProvider = props => {
   const [state, setState] = useState({
-    logo: require("../assets/slacker.png"),
+    logo: require("../assets/slacker.jpeg"),
     company: "slacker",
     firstName: "Steven",
     lastName: "Choi",

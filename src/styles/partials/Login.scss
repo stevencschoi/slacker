@@ -8,8 +8,18 @@
 
 form {
   margin: $margin-default;
+  input {
+    background-color: $color-secondary;
+    height: 2.5rem;
+    border: none;
+  }
 }
 
 button {
   margin: $margin-default;
+  padding: 0.5rem 1rem;
+}
+
+a {
+  color: $color-links;
 }
