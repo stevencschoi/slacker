@@ -1,7 +1,7 @@
 import React from "react";
 import "../../styles/partials/Login.scss";
-import Input from "../partials/Input";
-import Button from "../partials/Button";
+import Input from "./Input";
+import Button from "./Button";
 
 import { useUserData } from "../../helpers/useUserData";
 

@@ -6,8 +6,16 @@ header {
   align-items: center;
 }
 
+.logo {
+  width: 5rem;
+  img {
+    max-width: 100%;
+  }
+}
+
 nav {
   display: flex;
+
   ul {
     display: flex;
     margin-left: $margin-list;

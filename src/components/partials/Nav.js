@@ -1,15 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import "../../styles/Header.scss";
-import NavLink from "../partials/NavLink";
+import NavLink from "./NavLink";
+import { UserContext } from "../UserContext";
 
 export default function Nav() {
+  const info = useContext(UserContext);
   return (
     <nav>
       <ul>
         <NavLink path="/">Home</NavLink>
         <NavLink path="/about">About</NavLink>
-        <NavLink path="/blog">Blog</NavLink>
-        <NavLink path="/contact">Contact</NavLink>
+        <NavLink path="/profile">{info.firstName}</NavLink>
       </ul>
     </nav>
   );

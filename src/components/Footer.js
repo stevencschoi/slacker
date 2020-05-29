@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
 import NavLink from "./partials/NavLink";
 import "../styles/Footer.scss";
-import { MyContext } from "../components/MyContext";
+import { UserContext } from "./UserContext";
 
 export default function Footer() {
-  const info = useContext(MyContext);
+  const info = useContext(UserContext);
   return (
     <footer>
       {/*<div className="logo">
