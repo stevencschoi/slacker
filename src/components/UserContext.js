@@ -18,14 +18,14 @@ const UserContextProvider = props => {
     twitter: `https://twitter.com/thestevechoi`,
     linkedin: `https://www.linkedin.com/in/choisteven/`,
     // isLoggedIn: false,
-    // inputs: {
-    //   firstName: "",
-    //   lastName: "",
-    //   email: "",
-    //   username: "",
-    //   password: "",
-    //   passwordConfirmation: "",
-    // },
+    inputs: {
+      firstName: "",
+      lastName: "",
+      email: "",
+      username: "",
+      password: "",
+      passwordConfirmation: "",
+    },
   });
 
   return (

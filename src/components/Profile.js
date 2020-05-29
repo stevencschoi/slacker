@@ -14,7 +14,7 @@ export default function Profile() {
         </Button>
       </header>
       <div className="profile-pic">
-        <img src={info.avatar} alt="avatar" />
+        <img src={info[0].avatar} alt="avatar" />
       </div>
       <div className="profile-actions">
         <Button>Message</Button>
@@ -25,7 +25,7 @@ export default function Profile() {
       </div>
       <div>
         <h2>
-          {info.firstName} {info.lastName}
+          {info[0].firstName} {info[0].lastName}
         </h2>
       </div>
     </div>
