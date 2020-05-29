@@ -1,4 +1,4 @@
-import { useState, useContext } from "react";
+import { useContext } from "react";
 import { UserContext } from "../components/UserContext";
 
 export function useUserData() {

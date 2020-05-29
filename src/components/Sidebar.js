@@ -17,7 +17,7 @@ export default function Sidebar(props) {
           <div className="sidebar-info">
             <h3>Workspace Name {/* info.workspaceName */}</h3>
             <h4>
-              {info.firstName} {info.lastName}
+              {info[0].firstName} {info[0].lastName}
             </h4>
           </div>
           <Button message>
