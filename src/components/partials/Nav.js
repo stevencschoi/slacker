@@ -15,3 +15,6 @@ export default function Nav() {
     </nav>
   );
 }
+
+// if user is logged in, display:
+// {isLoggedIn ? info.firstName : Profile}

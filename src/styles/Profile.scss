@@ -1,8 +1,28 @@
 @import "utilities/_variables.scss";
 
-.default-avatar {
-  width: $avatar-width;
-  height: $avatar-width;
-  object-fit: cover;
-  object-position: 70% 0%;
+.profile {
+  width: $pic-width;
+
+  header {
+    height: $header-component;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.profile-pic {
+  img {
+    width: $pic-width;
+    height: $pic-width;
+    object-fit: cover;
+    // object-position: 70% 0%;
+  }
+}
+
+.profile-actions {
+  display: flex;
+  justify-content: space-evenly;
+  button {
+    padding: $button-padding;
+  }
 }

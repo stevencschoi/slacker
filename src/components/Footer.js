@@ -15,8 +15,8 @@ export default function Footer() {
       </div>
       <div>
         <ul className="social">
-          <NavLink path={info.facebook}>
-            <i className="fab fa-facebook"></i>
+          <NavLink path={info.github}>
+            <i class="fab fa-github"></i>
           </NavLink>
           <NavLink path={info.instagram}>
             <i className="fab fa-instagram-square"></i>
