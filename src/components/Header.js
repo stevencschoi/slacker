@@ -6,13 +6,14 @@ import { UserContext } from "./UserContext";
 
 export default function Header(props) {
   const info = useContext(UserContext);
+
   return (
     <header>
       <div className="logo">
-        <img src={info.logo} alt="company logo"></img>
+        <img src={info[0].logo} alt="company logo"></img>
       </div>
       <div className="left">
-        <h2>{info.company}</h2>
+        <h2>{info[0].company}</h2>
       </div>
       <Nav />
       {/* isLoggedIn ? <div>Hello, {info.firstName}</div> : <Login /> */}
