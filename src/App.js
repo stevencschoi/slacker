@@ -12,8 +12,8 @@ import { UserContextProvider } from "./components/UserContext";
 import "./styles/App.scss";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-import { Provider } from 'react-redux'
-import store from './redux/store'
+import { Provider } from "react-redux";
+import store from "./redux/store";
 
 function App() {
   return (
@@ -39,5 +39,3 @@ function App() {
 }
 
 export default App;
-
-// <Footer />
