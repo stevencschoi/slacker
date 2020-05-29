@@ -17,8 +17,17 @@ export function useUserData() {
       password: state.inputs.password
     })
       .then(res => {
+        setState(prev => ({...prev, isLoggedIn: true}))
         Cookies.set('userId', res.data._id);
-        console.log("data", res)
+      })
+  };
+  
+  const handleSubmitLogut = e => {
+    e.preventDefault();
+    axios.post("http://localhost:2468/logout")
+      .then(() => {
+        setState(prev => ({...prev, isLoggedIn: false}))
+        Cookies.remove('userId');
       })
   };
 
@@ -47,5 +56,5 @@ export function useUserData() {
     }));
   };
 
-  return { state, handleSubmit, handleInputChange, handleSubmitLogin };
+  return { state, handleSubmit, handleInputChange, handleSubmitLogin, handleSubmitLogut };
 }
