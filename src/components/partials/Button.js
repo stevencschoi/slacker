@@ -7,6 +7,8 @@ export default function Button(props) {
   const buttonClass = classNames({
     "btn btn-sm follow btn-primary": props.default,
     "login-button": props.loginButton,
+    "button-collapse": props.collapse,
+    "button-message": props.message,
   });
   return (
     <button

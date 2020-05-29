@@ -1,0 +1,32 @@
+@import "../utilities/_variables.scss";
+
+.login-state {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+form {
+  margin: $margin-default;
+  input {
+    background-color: $color-secondary;
+    height: 2.5rem;
+    border: none;
+  }
+}
+
+button {
+  margin: $margin-default;
+  padding: 0.5rem 1rem;
+}
+
+.register-words {
+  color: $color-text;
+  a {
+    color: $color-links;
+  }
+
+  a:hover {
+    color: $color-links-hover;
+  }
+}
