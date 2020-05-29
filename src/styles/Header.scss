@@ -3,6 +3,7 @@
 header {
   height: $fh-height;
   display: flex;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -13,6 +14,11 @@ header {
   }
 }
 
+.left {
+  display: flex;
+  align-items: center;
+}
+
 nav {
   display: flex;
 
@@ -21,7 +27,7 @@ nav {
     margin-left: $margin-list;
 
     li {
-      margin-right: $margin-list;
+      margin-right: $margin-head;
     }
   }
 }

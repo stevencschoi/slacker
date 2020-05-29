@@ -8,13 +8,18 @@ export default function Nav() {
   return (
     <nav>
       <ul>
-        <NavLink path="/">Home</NavLink>
-        <NavLink path="/about">About</NavLink>
-        <NavLink path="/profile">{info.firstName}</NavLink>
+        <NavLink path="/">
+          <i className="fas fa-home"></i>
+        </NavLink>
+        <NavLink path="/about">
+          <i className="far fa-question-circle"></i>
+        </NavLink>
+        <NavLink path="/profile">
+          <i className="fas fa-user"></i>
+        </NavLink>
       </ul>
     </nav>
   );
 }
 
-// if user is logged in, display:
-// {isLoggedIn ? info.firstName : Profile}
+// { isLoggedIn ? {info.firstName} : <i className="fas fa-user"></i>}
