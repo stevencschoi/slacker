@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { UserContext } from "../components/UserContext";
 import axios from "axios"
+import Cookies from "js-cookie"
 
 export function useUserData() {
   // const [state, setState] = useState({
@@ -14,11 +15,12 @@ export function useUserData() {
     if (state.inputs.password !== state.inputs.passwordConfirmation) {
       return alert("password doesn't match")
     }
-    console.log(state.inputs);
+    // console.log(state.inputs);
     axios.post("http://localhost:2468/register", {
       inputs: state.inputs
     })
     .then(res => {
+      Cookies.set('userId', res.data._id);
       console.log("data", res)
     })
   };
