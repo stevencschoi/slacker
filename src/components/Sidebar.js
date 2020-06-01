@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import Button from "./partials/Button";
 import Footer from "./Footer";
+import { Link } from "react-router-dom";
 import "../styles/Sidebar.scss";
 import { UserContext } from "./UserContext";
 
@@ -20,9 +21,11 @@ export default function Sidebar(props) {
               {info[0].firstName} {info[0].lastName}
             </h4>
           </div>
-          <Button message>
-            <i className="far fa-edit"></i>
-          </Button>
+          <Link to="/chat/new">
+            <Button message>
+              <i className="far fa-edit"></i>
+            </Button>
+          </Link>
         </div>
         <div className="default-links">stuff</div>
         <div className="channels">
