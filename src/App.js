@@ -6,6 +6,8 @@ import About from "./components/About";
 import Blog from "./components/Blog";
 import Profile from "./components/Profile";
 import Register from "./components/Register";
+import Chatroom from "./components/channels/Chatroom";
+
 // import Footer from "./components/Footer";
 import { UserContextProvider } from "./components/UserContext";
 
@@ -30,6 +32,7 @@ function App() {
               <Route path="/blog" exact component={Blog} />
               <Route path="/profile" exact component={Profile} />
               <Route path="/register" exact component={Register} />
+              <Route path="/chat/new" exact component={Chatroom} />
             </Switch>
           </div>
         </UserContextProvider>
