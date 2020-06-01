@@ -20,7 +20,6 @@ export function useUserData() {
 
   const handleSubmitLogin = e => {
     e.preventDefault();
-    // console.log(state.inputs);
     axios
       .post("http://localhost:2468/login", {
         username: state.inputs.username,
@@ -55,7 +54,6 @@ export function useUserData() {
     if (state.inputs.password !== state.inputs.passwordConfirmation) {
       return alert("Passwords don't match");
     }
-    // console.log(state.inputs);
     axios
       .post("http://localhost:2468/register", {
         inputs: state.inputs,

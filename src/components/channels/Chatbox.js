@@ -1,33 +1,29 @@
-import React, { useState } from "react";
+import React from "react";
 import Input from "../partials/Input";
 import Button from "../partials/Button";
 
-import axios from "axios";
+import { useMsgData } from "../../helpers/useMsgData";
 
 export default function Chatbox() {
-  // const { state } = useUserData();
-  const [message, setMessage] = useState("");
-
-  const handleInputChange = e => {
-    e.persist();
-    setMessage(e.target.value);
-  };
-
-  const submitMessage = e => {
-    e.preventDefault();
-    console.log("message is:", message);
-  };
+  const { state, handleMsgChange, handleMsgSubmit } = useMsgData();
 
   return (
-    <form onSubmit={submitMessage}>
+    <form onSubmit={handleMsgSubmit}>
       <Input
         type="text"
+        name="receiver"
+        placeholder="Type the name of the person"
+        value={state.msgInputs.receiver}
+        onChange={handleMsgChange}
+      />
+      <Input
+        type="textarea"
         name="message"
         placeholder="Message user X"
-        value={message}
-        onChange={handleInputChange}
+        value={state.msgInputs.message}
+        onChange={handleMsgChange}
       />
-      <Button>
+      <Button type="submit">
         <i className="fas fa-paper-plane"></i>
       </Button>
     </form>
