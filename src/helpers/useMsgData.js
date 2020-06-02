@@ -6,6 +6,17 @@ import Cookies from "js-cookie";
 export function useMsgData() {
   const [state, setState] = useContext(MsgContext);
 
+  const findUser = user => {
+    handleMsgChange(user);
+    let msgReceiver = state.msgInputs.receiver;
+    console.log("msgReceiver", msgReceiver);
+    const userId = Cookies.get("userId");
+    axios
+      .get(`http://localhost:2468/users?user=${msgReceiver}`)
+      .then(res => console.log("users", res))
+      .catch(err => console.error(err));
+  };
+
   const clearMsg = () => {
     setState(prev => ({
       ...prev,
@@ -42,6 +53,7 @@ export function useMsgData() {
 
   return {
     state,
+    findUser,
     handleMsgChange,
     handleMsgSubmit,
   };

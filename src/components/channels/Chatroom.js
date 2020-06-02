@@ -6,7 +6,7 @@ import "../../styles/channels/Chatroom.scss";
 import { useMsgData } from "../../helpers/useMsgData";
 
 export default function Chatroom() {
-  const { state, handleMsgChange } = useMsgData();
+  const { state, findUser } = useMsgData();
   return (
     <div className="chatroom">
       <Input
@@ -14,7 +14,7 @@ export default function Chatroom() {
         name="receiver"
         placeholder="Type the name of the person"
         value={state.msgInputs.receiver}
-        onChange={handleMsgChange}
+        onChange={findUser}
       />
       <ul>{/* messages display here */}</ul>
       <Chatbox />

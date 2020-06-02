@@ -9,6 +9,8 @@ const MsgContextProvider = props => {
       receiverId: "",
       senderId: "",
     },
+    users: [],
+    receivers: [],
   });
 
   return (
