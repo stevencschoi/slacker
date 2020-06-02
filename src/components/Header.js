@@ -22,7 +22,7 @@ export default function Header(props) {
       {info[0].isLoggedIn ? (
         <div>
           Hello, {info[0].firstName}
-          <button onClick={handleSubmitLogout}>Logout</button>
+          <Button onClick={handleSubmitLogout}>Logout</Button>
         </div>
       ) : (
         <Login />
