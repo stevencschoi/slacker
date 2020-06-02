@@ -1,0 +1,10 @@
+@import "../utilities/_variables.scss";
+
+.chatroom {
+  input[type="text"] {
+    background-color: $color-secondary;
+    width: 100%;
+    height: $input-height;
+    border: $border;
+  }
+}

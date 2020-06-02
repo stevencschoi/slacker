@@ -6,14 +6,17 @@ import About from "./components/About";
 import Blog from "./components/Blog";
 import Profile from "./components/Profile";
 import Register from "./components/Register";
+import Chatroom from "./components/channels/Chatroom";
+
 // import Footer from "./components/Footer";
 import { UserContextProvider } from "./components/UserContext";
+import { MsgContextProvider } from "./components/MsgContext";
 
 import "./styles/App.scss";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-import { Provider } from 'react-redux'
-import store from './redux/store'
+import { Provider } from "react-redux";
+import store from "./redux/store";
 
 function App() {
   return (
@@ -30,6 +33,9 @@ function App() {
               <Route path="/blog" exact component={Blog} />
               <Route path="/profile" exact component={Profile} />
               <Route path="/register" exact component={Register} />
+              <MsgContextProvider>
+                <Route path="/chat/new" exact component={Chatroom} />
+              </MsgContextProvider>
             </Switch>
           </div>
         </UserContextProvider>
@@ -39,5 +45,3 @@ function App() {
 }
 
 export default App;
-
-// <Footer />
