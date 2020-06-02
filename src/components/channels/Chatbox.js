@@ -1,6 +1,7 @@
 import React from "react";
 import Input from "../partials/Input";
 import Button from "../partials/Button";
+import "../../styles/channels/Chatbox.scss";
 
 import { useMsgData } from "../../helpers/useMsgData";
 
@@ -9,13 +10,6 @@ export default function Chatbox() {
 
   return (
     <form onSubmit={handleMsgSubmit}>
-      <Input
-        type="text"
-        name="receiver"
-        placeholder="Type the name of the person"
-        value={state.msgInputs.receiver}
-        onChange={handleMsgChange}
-      />
       <Input
         type="textarea"
         name="message"
