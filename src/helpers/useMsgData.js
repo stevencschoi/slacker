@@ -13,7 +13,7 @@ export function useMsgData() {
     const userId = Cookies.get("userId");
     axios
       .get(`http://localhost:2468/users?user=${msgReceiver}`)
-      .then(res => console.log("users", res))
+      .then(res => console.log("users", res.data))
       .catch(err => console.error(err));
   };
 
